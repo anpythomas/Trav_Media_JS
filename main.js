@@ -1,58 +1,24 @@
-const todos = [
-    {
-        id: 1,
-        text: 'Take out trash',
-        isCompleted: true
-    },
-    {
-        id: 2,
-        text: 'Meeting with boss',
-        isCompleted: true
-    },
-    {
-        id: 3,
-        text: 'Dentist appt',
-        isCompleted: false
-    }
-];
+// Turnary Operator - if statments with less code
 
+const x = 0;
 
-// For
-// for(let i = 0; i < 10; i++) {
-//     console.log(`For loop number ${i}`);
-// }
+// if x > 10 then set color to red... else set color to blue
+// ? = "then"
+// ":" = "else"
+const color = x > 10 ? 'red' : 'blue';
 
-// While
-// let i = 0;
-// while(i < 10) {
-//     console.log(i);
-//     i++;
-// }
+console.log(color);
 
-// for(let i = 0; i < todos.length; i++) {
-//     console.log(todos[i].text);
-// }
+// Switches
 
-// for(let todo of todos) {
-//     console.log(todo.text);
-// }
-
-// forEach, map, filter
-// todos.forEach(function(todo) {
-//     console.log(todo.isCompleted);
-// });
-
-// map
-// const todoText = todos.map(function(todo){
-//     return todo.text;
-// });
-
-// console.log(todoText);
-
-const todoCompleted = todos.filter(function(todo){
-    return todo.isCompleted === true;
-}).map(function(todo){
-    return todo.text;
-});
-
-console.log(todoCompleted);
+switch(color) {
+    case 'red':
+        console.log('color is red');
+        break;
+    case 'blue':
+        console.log('color is blue');
+        break;
+    default:
+        console.log('color is NOT red or blue');
+        break;
+}
