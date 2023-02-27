@@ -1,24 +1,30 @@
-// Turnary Operator - if statments with less code
+// Functions 
+// NO ARROW FUNCTIONS
 
-const x = 0;
-
-// if x > 10 then set color to red... else set color to blue
-// ? = "then"
-// ":" = "else"
-const color = x > 10 ? 'red' : 'blue';
-
-console.log(color);
-
-// Switches
-
-switch(color) {
-    case 'red':
-        console.log('color is red');
-        break;
-    case 'blue':
-        console.log('color is blue');
-        break;
-    default:
-        console.log('color is NOT red or blue');
-        break;
+function addNums(num1, num2) {
+    console.log(num1 + num2);
 }
+
+// Now we call the function with params
+addNums(3, 2);
+
+function addNumsDefaultVals(num1 = 1, num2 = 2) {
+    console.log(num1 + num2);
+}
+
+addNumsDefaultVals();
+
+
+// Normally we don't console log functions, we will return...
+function addNumsReturn(num1, num2) {
+    return num1 + num2;
+}
+
+console.log(addNumsReturn(3, 3));
+
+// WITH ARROW FUNCTIONS
+const addNumsArrow = (num1, num2) => {
+    console.log(num1 + num2);
+}
+
+addNumsArrow(10, 11);
