@@ -1,14 +1,11 @@
-// Single Element
-const form = document.getElementById('my-form');
-console.log(form);
+// Manipulating the DOM
+const ul = document.querySelector('.items');
 
-console.log(document.querySelector('h1'));
+// ul.remove();
+// ul.lastElementChild.remove();
+ul.firstElementChild.textContent = 'Hello';
+ul.children[1].innerText = 'Brad';
+ul.lastElementChild.innerHTML = '<h1>Hello</h1>';
 
-// Multiple Elements
-
-// Newest and preffered method
-console.log(document.querySelectorAll('.item'));
-
-// These two are older less efficient ways
-console.log(document.getElementsByClassName('item'));
-console.log(document.getElementsByTagName('li'));
+const btn = document.querySelector('.btn');
+btn.style.background = 'red';
