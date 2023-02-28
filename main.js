@@ -1,30 +1,40 @@
-// Functions 
-// NO ARROW FUNCTIONS
+// Constructor Function
 
-function addNums(num1, num2) {
-    console.log(num1 + num2);
+// function Person(firstName, lastName, dob) {
+//     this.firstName = firstName;
+//     this.lastName = lastName;
+//     this.dob = new Date(dob);
+//     this.getBirthYear = function() {
+//         return this.dob.getFullYear();
+//     }
+//     this.getFullName = function() {
+//         return `${this.firstName} ${this.lastName}`
+//     }
+// }
+
+//Class with methods
+class Person {
+    constructor(firstName, lastName, dob) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.dob = new Date(dob);
+    }
+
+    getBirthYear() {
+        return this.dob.getFullYear();
+    }
+
+    getFullName() {
+        return `${this.firstName} ${this.lastName}`;
+    }
 }
 
-// Now we call the function with params
-addNums(3, 2);
 
-function addNumsDefaultVals(num1 = 1, num2 = 2) {
-    console.log(num1 + num2);
-}
+// Instantiate object
+const person1 = new Person('John', 'Doe', '2-3-1983');
+const person2 = new Person('Mary', 'Smith', '9-3-1986');
 
-addNumsDefaultVals();
+console.log(person2.getBirthYear());
+console.log(person2.getFullName());
 
-
-// Normally we don't console log functions, we will return...
-function addNumsReturn(num1, num2) {
-    return num1 + num2;
-}
-
-console.log(addNumsReturn(3, 3));
-
-// WITH ARROW FUNCTIONS
-const addNumsArrow = (num1, num2) => {
-    console.log(num1 + num2);
-}
-
-addNumsArrow(10, 11);
+console.log(person1);
